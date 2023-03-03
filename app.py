@@ -1,8 +1,6 @@
-import dash
+
 import pathlib
-from dash import dcc
 import plotly.graph_objs as go
-from dash import html
 import pandas as pd
 import numpy as np
 from dash import Dash, Input, Output, dcc, html
