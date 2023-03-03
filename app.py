@@ -7,10 +7,10 @@ from dash import Dash, Input, Output, dcc, html
 import plotly.express as px
 import calendar
 
-# PATH = pathlib.Path(__file__).parent
+PATH = pathlib.Path(__file__).parent
 # DATA_PATH = PATH.joinpath("data").resolve()
 
-df = pd.read_csv("data.csv")
+df = pd.read_csv(PATH.joinpath("data.csv"))
 df["Date"] = pd.to_datetime(df["created_at"], format="%Y-%m-%d")
 df['Quarter'] = df['Date'].dt.quarter
 df['Year'] = df['Date'].dt.year
